@@ -1,6 +1,6 @@
 
 (async function () {
-    const BUSINESS_ID = "62c2bc6ec78008f8bbe24170";
+    const BUSINESS_ID = "6304a493b7f3a89f71077cd9";
     const LOGO = 'logo.webp';
     const HEADER_LOGO_IMAGAE = `https://www.soppiya.com/media/images/${BUSINESS_ID}/business/${LOGO}`;
     const PRIMARY_COLOR = `#BFA78A`;
@@ -269,7 +269,7 @@
             if (element.hasChild == true) {
                 subCatagoriesContentWrapper.appendChild(arrowIcon);
                 subLi.addEventListener("click", async function (e) {
-                    event.stopImmediatePropagation();
+                    e.stopImmediatePropagation();
                     let elementID = element._id;
                     if (subLi.children.length === 1) {
                         removeActiveSubmenu();
@@ -282,7 +282,7 @@
                 });
             } else {
                 subLi.addEventListener("click", function (e) {
-                    event.stopImmediatePropagation();
+                    e.stopImmediatePropagation();
                     typeof handleNavigate === "function" && handleNavigate(`/category/${element._id}`);
                     console.log(`/category/${element._id}`);
                 });
